@@ -6,36 +6,56 @@ Created on Thu Apr 13 15:42:52 2023
 """
 
 # import openneuro as on
-# on.download(dataset='ds004302', target_dir='data/bids')
+# on.download(dataset='ds000171', target_dir='data2/bids')
 
 import nibabel as nib
+from nilearn import plotting
 import matplotlib.pyplot as plt
+import numpy as np
+import nibabel as nib
 
-#1. ANATOMICAL
-anat_subj1 = nib.load('C:/Users/Marcin/Desktop/data/bids/sub-01/anat/sub-01_T1w.nii.gz')
-
-# Get the data array of the image
-anat_subj1_data = anat_subj1.get_fdata()
-
-# Plot
-num_slices = anat_subj1_data.shape[2]
-for i in range(num_slices):
-    plt.imshow(anat_subj1_data[:,:,i], cmap='gray')
+# Different control participants in music condition (is enkel anatomisch)
+for pp in range(1,20):
+    if pp < 10:
+        nr = '0' + str(pp)
+    else:
+        nr = str(pp)
+    print('participant' + nr)
+    control_subj1 = nib.load('C:/Users/Marcin/Desktop/data2/bids/sub-control' + nr +'/func/sub-control' + nr +'_task-music_run-'+ '1' + '_bold.nii.gz')
+    # Show the plot
     plt.show()
 
-#2. FUNCTIONAL
-func_subj1 = nib.load('C:/Users/Marcin/Desktop/data/bids/sub-01/func/sub-01_task-speech_bold.nii.gz')
+# MDD participant 1 music - functies voor functionele data
+mdd_subj1 = nib.load('C:/Users/Marcin/Desktop/data2/bids/sub-mdd01/func/sub-mdd01_task-music_run-1_bold.nii.gz')
+mdd_subj1_data = mdd_subj1.get_fdata()
+plotting.plot_roi(mdd_subj1.slicer[..., 10])
+plotting.plot_glass_brain(mdd_subj1.slicer[..., 10])
+plotting.plot_stat_map(mdd_subj1.slicer[..., 10])
+plotting.plot_epi(mdd_subj1.slicer[..., 10])
+#plotting.plot_connectome(mdd_subj1.slicer[..., 1]) #coords
 
-# Get the data array of the image
-func_subj1_data = func_subj1.get_fdata()
+plt.show()
 
-# Plot
-num_slices = func_subj1_data.shape[2]
-for i in range(1,num_slices, 2):
-    plt.imshow(func_subj1_data[:,:, i,1], cmap='gray')
-    plt.show()
+#WERKT NIET
+# Load data for all participants
+mdd_data = []
+for i in range(1, 20):
+    filename = 'C:/Users/Marcin/Desktop/data2/bids/sub-mdd{:02d}/func/sub-mdd{:02d}_task-music_run-1_bold.nii.gz'.format(i, i)
+    mdd_subj = nib.load(filename)
+    mdd_subj_data = mdd_subj.get_fdata()
+    mdd_data.append(mdd_subj_data)
 
-print(num_slices)
+# Compute mean brain activity across participants
+mean_data = np.mean(mdd_data, axis=0)
+
+threshold = 0.5
+# Plot mean brain activity
+plotting.plot_roi(nib.Nifti1Image(mean_data, mdd_subj.affine), cut_coords=(x, y, z))
+plotting.plot_glass_brain(nib.Nifti1Image(mean_data, mdd_subj.affine), threshold=threshold)
+plotting.plot_stat_map(nib.Nifti1Image(mean_data, mdd_subj.affine), threshold=threshold)
+plotting.plot_epi(nib.Nifti1Image(mean_data, mdd_subj.affine), cut_coords=(x, y, z))
+
+
 
 
 
