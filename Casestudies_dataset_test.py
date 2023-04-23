@@ -12,7 +12,7 @@ import nibabel as nib
 from nilearn import plotting
 import matplotlib.pyplot as plt
 import numpy as np
-import nibabel as nib
+
 
 # Different control participants in music condition (is enkel anatomisch)
 for pp in range(1,20):
