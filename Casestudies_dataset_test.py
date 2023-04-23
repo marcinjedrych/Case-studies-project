@@ -5,8 +5,8 @@ Created on Thu Apr 13 15:42:52 2023
 @author: Marcin
 """
 
-# import openneuro as on
-# on.download(dataset='ds000171', target_dir='data2/bids')
+import openneuro
+# openneuro.download(dataset='ds000171', target_dir='data2/bids')
 
 import nibabel as nib
 from nilearn import plotting
