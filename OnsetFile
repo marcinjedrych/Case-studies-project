@@ -1,0 +1,127 @@
+% % Onset files for arm movements
+% % Run this script from the directory that contains all of your subjects
+
+subjects = [01 02 03]; % Replace with a list of all of the subjects you wish to analyze
+
+
+for subject=subjects
+    
+    subject = num2str(subject, '%02d'); % Zero-pads each number so that the subject ID is 2 characters long
+
+    cd(['sub-' subject]) % Navigate to the subject's directory
+
+    Run1_onsetTimes = tdfread(['sub-' subject '_ses-1_task-motor_run-01_events.tsv'], '\t'); % Read onset times file
+    Run1_onsetTimes.trial_type = string(Run1_onsetTimes.trial_type); % Convert char array to string array, to make logical comparisons easier
+
+    Run1_Rest = [];
+    Run1_ArmMovement = [];
+
+    for i = 1:length(Run1_onsetTimes.onset)
+        if strtrim(Run1_onsetTimes.trial_type(i,:)) == 'Rest'
+            Run1_Rest = [Run1_Rest; Run1_onsetTimes.onset(i,:) Run1_onsetTimes.duration(i,:)];
+        elseif strtrim(Run1_onsetTimes.trial_type(i,:)) == 'Upper arm movements'
+            Run1_ArmMovement = [Run1_ArmMovement; Run1_onsetTimes.onset(i,:) Run1_onsetTimes.duration(i,:)];
+        elseif strtrim(Run1_onsetTimes.trial_type(i,:)) == 'Forearm movements'
+            Run1_ArmMovement = [Run1_ArmMovement; Run1_onsetTimes.onset(i,:) Run1_onsetTimes.duration(i,:)];
+        end
+    end
+
+    Run2_onsetTimes = tdfread(['sub-' subject '_ses-1_task-motor_run-02_events.tsv'], '\t');
+    Run2_onsetTimes.trial_type = string(Run2_onsetTimes.trial_type);
+
+    Run2_Rest = [];
+    Run2_ArmMovement = [];
+
+    for i = 1:length(Run2_onsetTimes.onset)
+        if strtrim(Run2_onsetTimes.trial_type(i,:)) == 'Rest'
+            Run2_Rest = [Run2_Rest; Run2_onsetTimes.onset(i,:) Run2_onsetTimes.duration(i,:)];
+        elseif strtrim(Run2_onsetTimes.trial_type(i,:)) == 'Upper arm movements'
+            Run2_ArmMovement = [Run2_ArmMovement; Run2_onsetTimes.onset(i,:) Run2_onsetTimes.duration(i,:)];
+        elseif strtrim(Run2_onsetTimes.trial_type(i,:)) == 'Forearm movements'
+            Run2_ArmMovement = [Run2_ArmMovement; Run2_onsetTimes.onset(i,:) Run2_onsetTimes.duration(i,:)];
+        end
+    end
+
+    Run3_onsetTimes = tdfread(['sub-' subject '_ses-1_task-motor_run-03_events.tsv'], '\t');
+    Run3_onsetTimes.trial_type = string(Run3_onsetTimes.trial_type);
+
+    Run3_Rest = [];
+    Run3_ArmMovement = [];
+
+    for i = 1:length(Run3_onsetTimes.onset)
+        if strtrim(Run3_onsetTimes.trial_type(i,:)) == 'Rest'
+            Run3_Rest = [Run3_Rest; Run3_onsetTimes.onset(i,:) Run3_onsetTimes.duration(i,:)];
+        elseif strtrim(Run3_onsetTimes.trial_type(i,:)) == 'Upper arm movements'
+            Run3_ArmMovement = [Run3_ArmMovement; Run3_onsetTimes.onset(i,:) Run3_onsetTimes.duration(i,:)];
+        elseif strtrim(Run3_onsetTimes.trial_type(i,:)) == 'Forearm movements'
+            Run3_ArmMovement = [Run3_ArmMovement; Run3_onsetTimes.onset(i,:) Run3_onsetTimes.duration(i,:)];
+        end
+    end
+
+    Run4_onsetTimes = tdfread(['sub-' subject '_ses-1_task-motor_run-04_events.tsv'], '\t');
+    Run4_onsetTimes.trial_type = string(Run4_onsetTimes.trial_type);
+
+    Run4_Rest = [];
+    Run4_ArmMovement = [];
+
+    for i = 1:length(Run4_onsetTimes.onset)
+        if strtrim(Run4_onsetTimes.trial_type(i,:)) == 'Rest'
+            Run4_Rest = [Run4_Rest; Run4_onsetTimes.onset(i,:) Run4_onsetTimes.duration(i,:)];
+        elseif strtrim(Run4_onsetTimes.trial_type(i,:)) == 'Upper arm movements'
+            Run4_ArmMovement = [Run4_ArmMovement; Run4_onsetTimes.onset(i,:) Run4_onsetTimes.duration(i,:)];
+        elseif strtrim(Run4_onsetTimes.trial_type(i,:)) == 'Forearm movements'
+            Run4_ArmMovement = [Run4_ArmMovement; Run4_onsetTimes.onset(i,:) Run4_onsetTimes.duration(i,:)];
+        end
+    end
+
+    Run5_onsetTimes = tdfread(['sub-' subject '_ses-1_task-motor_run-05_events.tsv'], '\t');
+    Run5_onsetTimes.trial_type = string(Run5_onsetTimes.trial_type);
+
+    Run5_Rest = [];
+    Run5_ArmMovement = [];
+
+    for i = 1:length(Run5_onsetTimes.onset)
+        if strtrim(Run5_onsetTimes.trial_type(i,:)) == 'Rest'
+            Run5_Rest = [Run5_Rest; Run5_onsetTimes.onset(i,:) Run5_onsetTimes.duration(i,:)];
+        elseif strtrim(Run5_onsetTimes.trial_type(i,:)) == 'Upper arm movements'
+            Run5_ArmMovement = [Run5_ArmMovement; Run5_onsetTimes.onset(i,:) Run5_onsetTimes.duration(i,:)];
+        elseif strtrim(Run5_onsetTimes.trial_type(i,:)) == 'Forearm movements'
+            Run5_ArmMovement = [Run5_ArmMovement; Run5_onsetTimes.onset(i,:) Run5_onsetTimes.duration(i,:)];
+        end
+    end
+
+    Run6_onsetTimes = tdfread(['sub-' subject '_ses-1_task-motor_run-06_events.tsv'], '\t');
+    Run6_onsetTimes.trial_type = string(Run6_onsetTimes.trial_type);
+
+    Run6_Rest = [];
+    Run6_ArmMovement = [];
+
+    for i = 1:length(Run6_onsetTimes.onset)
+        if strtrim(Run6_onsetTimes.trial_type(i,:)) == 'Rest'
+            Run6_Rest = [Run6_Rest; Run6_onsetTimes.onset(i,:) Run6_onsetTimes.duration(i,:)];
+        elseif strtrim(Run6_onsetTimes.trial_type(i,:)) == 'Upper arm movements'
+            Run6_ArmMovement = [Run6_ArmMovement; Run6_onsetTimes.onset(i,:) Run6_onsetTimes.duration(i,:)];
+        elseif strtrim(Run6_onsetTimes.trial_type(i,:)) == 'Forearm movements'
+            Run6_ArmMovement = [Run6_ArmMovement; Run6_onsetTimes.onset(i,:) Run6_onsetTimes.duration(i,:)];
+        end
+    end
+   
+   % Save timing files into text files
+
+    save('Rest_run1.txt', 'Run1_Rest', '-ASCII');
+    save('Rest_run2.txt', 'Run2_Rest', '-ASCII');
+    save('Rest_run3.txt', 'Run3_Rest', '-ASCII');
+    save('Rest_run4.txt', 'Run4_Rest', '-ASCII');
+    save('Rest_run5.txt', 'Run5_Rest', '-ASCII');
+    save('Rest_run6.txt', 'Run6_Rest', '-ASCII');
+    save('ArmMovement_run1.txt', 'Run1_ArmMovement', '-ASCII');
+    save('ArmMovement_run2.txt', 'Run2_ArmMovement', '-ASCII');
+    save('ArmMovement_run3.txt', 'Run3_ArmMovement', '-ASCII');
+    save('ArmMovement_run4.txt', 'Run4_ArmMovement', '-ASCII');
+    save('ArmMovement_run5.txt', 'Run5_ArmMovement', '-ASCII');
+    save('ArmMovement_run6.txt', 'Run6_ArmMovement', '-ASCII');
+    
+    % go to previous directory (the directory that contains all of your subjects)
+    cd ../
+
+end
