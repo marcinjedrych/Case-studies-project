@@ -1,4 +1,5 @@
 %%This code runs model specification and estimation for 1 subject (here subject 05), only arm movements vs rest
+%replace path names!
 
 % Execute the code specified in the SPM GUI
 matlabbatch{1}.spm.stats.fmri_spec.dir = {'C:\Users\kevse\OneDrive\Documenten\2e master experimentele psy\Case studies\analyse\1st level\sub-05'};
