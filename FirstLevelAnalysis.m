@@ -1,4 +1,5 @@
-%%This code runs model specification and estimation for 1 subject (here subject 05), only arm movements vs rest
+%%This code runs model specification and estimation for all subjects, all movements
+%%Save this file in the directory with all subject folders containing the preprocessed data
 %%Execute the code specified in the SPM GUI
 
 %% Unzip files if not yet done
