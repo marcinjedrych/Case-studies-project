@@ -83,6 +83,8 @@ matlabbatch{1}.spm.stats.fmri_est.write_residuals = 0;
 matlabbatch{1}.spm.stats.fmri_est.method.Classical = 1;
 
 %% Contrasts
-
+matlabbatch{3}.spm.stats.con.spmmat = {'D:\Riet\CaseStudies\Analyses\SecondLevel\SPM.mat'};
+matlabbatch{3}.spm.stats.con.consess{1}.tcon.name = 'Arm-Rest';
+matlabbatch{3}.spm.stats.con.consess{1}.tcon.weights = 1;
 
 spm_jobman('run', matlabbatch);
