@@ -1,7 +1,6 @@
 %-----------------------------------------------------------------------
-% Job saved on 07-Jun-2023 10:19:10 by cfg_util (rev $Rev: 7345 $)
-% spm SPM - SPM12 (7771)
-% cfg_basicio BasicIO - Unknown
+% This code runs second level analysis for mouth movements
+% Run this code in Matlab while SPM is running
 %-----------------------------------------------------------------------
 matlabbatch{1}.spm.stats.factorial_design.dir = {'D:\Riet\CaseStudies\Analyses\SecondLevel\Mouth'};
 matlabbatch{1}.spm.stats.factorial_design.des.t1.scans = {
