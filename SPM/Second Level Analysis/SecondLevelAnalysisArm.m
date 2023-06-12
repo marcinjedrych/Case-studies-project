@@ -3,12 +3,11 @@
 % spm SPM - SPM12 (7771)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
-matlabbatch{1}.spm.stats.factorial_design.dir = {'D:\Riet\CaseStudies\Analyses\SecondLevel'};
+matlabbatch{1}.spm.stats.factorial_design.dir = {'D:\Riet\CaseStudies\Analyses\SecondLevel\Arm'};
 matlabbatch{1}.spm.stats.factorial_design.des.t1.scans = {
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-01\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-02\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-03\con_0001.nii,1'
-                                                          'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-04\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-05\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-06\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-07\con_0001.nii,1'
@@ -25,11 +24,9 @@ matlabbatch{1}.spm.stats.factorial_design.des.t1.scans = {
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-20\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-21\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-22\con_0001.nii,1'
-                                                          'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-23\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-24\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-25\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-26\con_0001.nii,1'
-                                                          'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-27\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-29\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-30\con_0001.nii,1'
                                                           'D:\Riet\CaseStudies\Analyses\FirstLevel\sub-31\con_0001.nii,1'
@@ -78,12 +75,12 @@ matlabbatch{1}.spm.stats.factorial_design.globalm.gmsca.gmsca_no = 1;
 matlabbatch{1}.spm.stats.factorial_design.globalm.glonorm = 1;
 
 %% Estimation
-matlabbatch{1}.spm.stats.fmri_est.spmmat = {'D:\Riet\CaseStudies\Analyses\SecondLevel\SPM.mat'};
-matlabbatch{1}.spm.stats.fmri_est.write_residuals = 0;
-matlabbatch{1}.spm.stats.fmri_est.method.Classical = 1;
+matlabbatch{2}.spm.stats.fmri_est.spmmat = {'D:\Riet\CaseStudies\Analyses\SecondLevel\Arm\SPM.mat'};
+matlabbatch{2}.spm.stats.fmri_est.write_residuals = 0;
+matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;
 
 %% Contrasts
-matlabbatch{3}.spm.stats.con.spmmat = {'D:\Riet\CaseStudies\Analyses\SecondLevel\SPM.mat'};
+matlabbatch{3}.spm.stats.con.spmmat = {'D:\Riet\CaseStudies\Analyses\SecondLevel\Arm\SPM.mat'};
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.name = 'Arm-Rest';
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.weights = 1;
 
