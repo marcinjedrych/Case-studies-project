@@ -5,7 +5,7 @@ First, we did some additional preprocessing on the original fmriprep data. We we
 2) Segment
 3) Normalize
 
-Secondly, we performed a first level analysis using the code in the 'First Level Analysis' folder. The contrasts that were created using this analysis are uploaded in the subfolder 'Results' within the 'First Level Analysis' folder.
+Secondly, we performed a first level analysis using the code in the 'First Level Analysis' folder. To run this analysis, we first ran the code 'OnsetFileAll' to create timing files for each movement condition separately (based on the event files). The contrasts that were created using this first level analysis are uploaded in the subfolder 'Results' within the 'First Level Analysis' folder. Also the timing files can be found in the subfolder 'OnsetFiles'
 
 Lastly, we did a second level analysis using the code in the 'Second Level Analysis' folder. Also here, results of this analysis are uploaded in the subfolder 'Results' in the 'Second Level Analysis' folder.
 
