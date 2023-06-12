@@ -1,9 +1,6 @@
 %-----------------------------------------------------------------------
 % Code for preprocessing, step 3: normalize
-% spm SPM - SPM12 (7771)
-% cfg_basicio BasicIO - Unknown
-
-% Run htis code in Matlab while SPM is running
+% Run this code in Matlab while SPM is running
 %-----------------------------------------------------------------------
 
 %% Unzip files if not yet done
