@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Code for preprocessing, step 3: normalise
+% Code for preprocessing, step 3: normalize
 % spm SPM - SPM12 (7771)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
