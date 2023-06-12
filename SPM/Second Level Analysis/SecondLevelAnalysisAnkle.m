@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% This code runs second level analysis
+% This code runs second level analysis for ankle movements
 % Run this code in Matlab while SPM is running
 %-----------------------------------------------------------------------
 matlabbatch{1}.spm.stats.factorial_design.dir = {'D:\Riet\CaseStudies\Analyses\SecondLevel\Ankle'};
