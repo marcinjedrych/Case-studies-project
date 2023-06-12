@@ -7,6 +7,6 @@ First, we did some additional preprocessing on the original fmriprep data. We we
 
 Secondly, we performed a first level analysis using the code in the 'First Level Analysis' folder. To run this analysis, you first have to run the code 'OnsetFileAll' to create timing files for each movement condition separately (based on the event files). The contrasts that were created using this first level analysis are uploaded in the subfolder 'Results' within the 'First Level Analysis' folder. Also the timing files can be found in the subfolder 'OnsetFiles' together with the original event files.
 
-Lastly, we did a second level analysis using the code in the 'Second Level Analysis' folder. Also here, results of this analysis are uploaded in the subfolder 'Results' in the 'Second Level Analysis' folder.
+Lastly, we did a second level analysis using the code in the 'Second Level Analysis' folder. To create the final results of the second level analysis, one should click on the 'results' button in SPM and select the SPM file and contrast that was created using the 'Second Level Analysis' code. Also here, results of this analysis are uploaded in the subfolder 'Results' in the 'Second Level Analysis' folder.
 
 The results of the second level analysis were visualized using the MRIcroGL tool which can be downloaded here: https://www.nitrc.org/projects/mricrogl.
