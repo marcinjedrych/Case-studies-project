@@ -1,4 +1,4 @@
-This folder contains the code needed to reproduce our analysis with Nilearn.
+This folder contains the code to reproduce our analysis with Nilearn.
 
 1.) 1st level analysis:
 
