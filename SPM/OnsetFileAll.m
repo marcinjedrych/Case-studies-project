@@ -1,4 +1,4 @@
-% % Onset files for arm movements
+% % Onset files for all movements
 % % Run this script from the directory that contains all of your subjects
 
 subjects = [01 02 03 04 05 06 07 08 09 10]; % Replace with a list of all of the subjects you wish to analyze
