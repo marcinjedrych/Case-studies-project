@@ -2,7 +2,7 @@ This folder contains the code to reproduce our analysis with Nilearn.
 
 1.) 1st level analysis:
 
-  In this script we created a design matrix for the first participant. After defining the contrasts, we made a first level       model.
+  In this script we created a design matrix for the first participant. After also defining the contrasts, we made a first       level model.
 
 2.) 2nd level analysis (Ankle condition):
  
