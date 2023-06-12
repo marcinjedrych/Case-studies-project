@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Job saved on 06-Jun-2023 21:13:45 by cfg_util (rev $Rev: 7345 $)
+% Code for preprocessing, step 3: normalise
 % spm SPM - SPM12 (7771)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
