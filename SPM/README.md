@@ -1,7 +1,7 @@
 This folder contains all code needed to reproduce our SPM analysis on the dataset. All analyses were done in MATLAB version R2023a using the SPM12 package (https://www.fil.ion.ucl.ac.uk/spm/software/download/).
 
 First, we did some additional preprocessing on the original fmriprep data. We were not able to upload the preprocessed data because data files were too large. However, one can reproduce the preprocessing analyses using the following codes in the right order:
-1) Corigster
+1) Coregister
 2) Segment
 3) Normalize
 
