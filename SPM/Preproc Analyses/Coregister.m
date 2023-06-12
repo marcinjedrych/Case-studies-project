@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Job saved on 06-Jun-2023 20:17:08 by cfg_util (rev $Rev: 7345 $)
+% Code for preprocessing, step 1: coregister
 % spm SPM - SPM12 (7771)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
